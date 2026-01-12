@@ -1,276 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Playbook — 1º Preparatoria — Misión M06 - Few Shot Prompting</title>
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-HS1-TM6</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-<h1><span class="book-icon">📋</span> <strong>Playbook Misión M06 - Few Shot Prompting</strong></h1>
-<div class="header-widgets">
-<div class="timer-container">
-<span id="timer">⏱️ 00:00</span>
-<button id="startStop">Start</button>
-<button id="reset">Reset</button>
-</div>
-<div class="theme-toggle">
-<i class="fas fa-sun"></i>
-<label class="switch">
-<input type="checkbox" id="theme-toggle-input">
-<span class="slider round"></span>
-</label>
-<i class="fas fa-moon"></i>
-</div>
-</div>
-</header>
-<div class="main-container">
-<aside class="activity-list">
-<h2>Actividades</h2>
-<ul>
-<li><a href="#activity-0">📝</a></li>
-<li><a href="#activity-1">1</a></li>
-<li><a href="#activity-2">2</a></li>
-<li><a href="#activity-3">3</a></li>
-<li><a href="#activity-4">4</a></li>
-<li><a href="#activity-5">5</a></li>
-</ul>
-<div class="sidebar-info">
-<p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-<p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-</div>
-</aside>
-<main class="content">
-<div class="progress-bar">
-<div class="progress"></div>
-</div>
-<button id="toggle-dialogues">Mostrar todos los diálogos</button>
-<section class="activity-card" id="activity-0">
-<h2 class="activity-title">📝 De un Vistazo: Misión M06 - Few Shot Prompting</h2>
-<p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-<div class="overview">
-<section class="overview-block">
-<h3>Objetivos e “I Can”</h3>
-<ul>
-<li>Puedo explicar el concepto de Few-Shot Prompting y su relevancia en la interacción con modelos de IA.</li>
-<li>Puedo construir prompts efectivos utilizando ejemplos (Few-Shot) para guiar la generación de texto de una IA.</li>
-<li>Puedo evaluar la consistencia de las respuestas de una IA con los ejemplos proporcionados.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Secuencia y tiempos</h3>
-<ol>
-<li>Saludo Interactivo con IA — 3 min</li>
-<li>“I Can” + Desafío — 5–7 min</li>
-<li>AI GYM — 10–12 min</li>
-<li>Brain Spark — 17–20 min</li>
-<li>GNIUS STORM — 5 min</li>
-</ol>
-</section>
-<section class="overview-block">
-<h3>Entregable del Micro-Proyecto</h3>
-<ul>
-<li>Un prompt Few-Shot funcional y los resultados generados por un LLM que demuestren la aplicación exitosa de la técnica.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Criterios de calidad</h3>
-<ul>
-<li>Claridad y pertinencia de los 2-3 ejemplos en el prompt Few-Shot.</li>
-<li>Coherencia del resultado generado por la IA con el formato y estilo de los ejemplos.</li>
-<li>Aplicación correcta de la estructura del prompt para la tarea asignada.</li>
-</ul>
-</section>
-<section class="overview-block">
-<h3>Materiales y preparación</h3>
-<ul>
-<li>Proyector e internet</li>
-<li>Acceso a LLM (ej. ChatGPT, Gemini, Copilot)</li>
-<li>Editor de texto o entorno de desarrollo de prompts</li>
-<li>Plantilla de ejemplo de prompt Few-Shot lista</li>
-</ul>
-</section>
-</div>
-</section>
-<section class="activity-card" id="activity-1">
-<h2 class="activity-title">Saludo Interactivo con IA</h2>
-<p class="activity-purpose">Establecer tono profesional, conectar con el tema y activar a Xolo con perfil+intereses.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-<p class="step-instructions">Proyectar Diapositiva 2. Enuncia el foco conceptual de Few-Shot Prompting y su relevancia profesional.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Equipo: hoy profundizaremos en una técnica clave para la interacción con modelos de IA: el Few-Shot Prompting. Esta habilidad es fundamental para optimizar la comunicación con la IA y asegurar que los resultados generados sean precisos y consistentes con nuestras expectativas. Nuestro objetivo es producir prompts que guíen eficazmente a la IA.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-<p class="step-instructions">Cada estudiante abre su chat con Xolo y envía saludo con perfil de aprendizaje e intereses + referencia a la misión.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Pueden usar un mensaje como: "Hola Xolo, soy [Nombre], mi perfil es [Ej. Analista de Datos]; me interesa [Ej. la optimización de procesos]. Estoy en la Misión M06 sobre Few-Shot Prompting." Confirmen que Xolo ha recibido su mensaje y está listo para la sesión.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<section class="activity-card" id="activity-2">
-<h2 class="activity-title">“I Can Statement” + Desafío</h2>
-<p class="activity-purpose">Explicitar metas y presentar el reto que guiará la producción.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Presentación del reto</h3>
-<p class="step-instructions">Proyectar Diapositiva 3. Define el reto: optimizar la interacción con modelos de IA para obtener resultados precisos y consistentes.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">El reto de hoy es dominar el Few-Shot Prompting. Esto significa que aprenderán a 'enseñar con el ejemplo' a la IA, proporcionando 2-3 ejemplos de input/output para alinear su formato o estilo. Evaluaremos su capacidad para generar un prompt que, con ejemplos, produzca resultados alineados con sus expectativas.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Afirmación “I Can”</h3>
-<p class="step-instructions">Proyectar Diapositiva 4. Cada estudiante redacta 1 “I Can” concreto alineado al entregable del micro-proyecto.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Ahora, formulen su propia afirmación "I Can" para esta misión. Debe ser una frase concisa que capture lo que podrán lograr. Por ejemplo: "Puedo aplicar la técnica de Few-Shot Prompting para guiar un modelo de IA a generar resultados con un formato y estilo específico." Tienen un minuto para redactar el suyo.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<section class="activity-card" id="activity-3">
-<h2 class="activity-title">AI GYM</h2>
-<p class="activity-purpose">Formalizar el concepto de Few-Shot Prompting y el In-Context Learning.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Marco del día</h3>
-<p class="step-instructions">Proyectar Diapositiva 5. Introduce el Few-Shot Prompting como 'enseñar con el ejemplo'.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Hoy nos enfocamos en el Few-Shot Prompting, una técnica que le permite a la IA aprender de ejemplos directamente en el prompt, sin necesidad de reentrenamiento. Este marco agrega valor porque mejora significativamente la precisión y consistencia de las respuestas. Eviten errores comunes como proporcionar ejemplos inconsistentes o insuficientes. Usen ejemplos claros y representativos para validar los resultados.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Mini-demostración</h3>
-<p class="step-instructions">Proyectar Diapositiva 6. Construye en vivo un ejemplo mínimo de Few-Shot Prompt para una tarea sencilla.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Observen cómo la inclusión de estos dos ejemplos de input/output guía a la IA a replicar el formato deseado. Por ejemplo, si queremos que la IA resuma textos en viñetas, le daremos un par de ejemplos de texto original y su resumen en viñetas. Verifica con estas preguntas: ¿El ejemplo es claro? ¿El resultado esperado es evidente a partir del ejemplo?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 3 — Check rápido</h3>
-<p class="step-instructions">Proyectar Diapositiva 7. Verifica comprensión con 2 preguntas breves.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Pregunta 1: ¿Cuántos ejemplos mínimos se recomiendan para un Few-Shot Prompt? Pregunta 2: ¿Cuál es la principal ventaja de usar Few-Shot Prompting sobre un prompt sin ejemplos (zero-shot)?</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<section class="activity-card" id="activity-4">
-<h2 class="activity-title">Brain Spark</h2>
-<p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto aplicando el marco del AI GYM.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Producción</h3>
-<p class="step-instructions">Proyectar Diapositiva 8. Indica qué producir: un prompt Few-Shot para una tarea concreta (organizar notas, poesía con estructura rítmica, generador de ideas para guiones, etc.) y generar resultados con un LLM. Tiempo de trabajo autónomo.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">N/A</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Iteración</h3>
-<p class="step-instructions">Proyectar Diapositiva 9. Pide una mejora concreta: refinar los ejemplos, añadir una restricción o probar con diferentes variaciones de la tarea para asegurar la consistencia.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Antes de cerrar la producción: valida que tus ejemplos sean claros y que el resultado de la IA sea consistente con ellos. Si observas desviaciones, ajusta la formulación de tus ejemplos o añade uno adicional. Prueba tu prompt al menos dos veces para verificar la consistencia.</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 3 — Evidencia</h3>
-<p class="step-instructions">Proyectar Diapositiva 10. Solicita comprobantes: el prompt Few-Shot y las salidas generadas por el LLM.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Para finalizar esta fase, suban su prompt Few-Shot y las respuestas generadas por la IA al canal indicado. Nombren su archivo: M06_FewShot_[SuNombre]_Prompt_Resultados.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-<section class="activity-card" id="activity-5">
-<h2 class="activity-title">GNIUS STORM</h2>
-<p class="activity-purpose">Exhibición breve, síntesis y conexión profesional.</p>
-<div class="steps">
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-<p class="step-instructions">2–3 estudiantes muestran su prompt y el output, destacando la consistencia lograda (30–45 s c/u).</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">Compartan en 30 segundos: ¿Cuál fue su tarea? ¿Cómo estructuraron su Few-Shot Prompt? Y, ¿qué tan consistente fue el resultado de la IA con sus ejemplos?</p>
-</div>
-</div>
-</article>
-<article class="step-card">
-<div class="step-content">
-<h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-<p class="step-instructions">Proyectar Diapositiva 11. Redacta síntesis: 1 aprendizaje clave, 1 criterio de calidad que marcó la diferencia, siguiente paso aplicable fuera del aula.</p>
-</div>
-<div class="collapsible">
-<button type="button" class="collapsible-button">Diálogo Sugerido</button>
-<div class="collapsible-content">
-<p class="dialogue assistant">En síntesis, hoy aprendimos que el Few-Shot Prompting es una herramienta poderosa para dirigir la IA con precisión, transformando una indicación general en una instrucción detallada. El criterio clave que marcó la diferencia fue la claridad y pertinencia de los ejemplos que proporcionaron. Como siguiente paso, consideren aplicar esta técnica en cualquier proyecto donde necesiten que una IA genere contenido con un formato o estilo específico, como la redacción de informes estandarizados o la creación de contenido creativo con una estructura definida.</p>
-</div>
-</div>
-</article>
-</div>
-</section>
-</main>
-</div>
-<script src="script.js"></script>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 6 - 1o de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar ChatGPT, Gemini o Claude para diseñar ejemplos de entrada/salida que controlen el formato y la consistencia de las respuestas y comprender el aprendizaje por patrones (in-context).</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame qué es Few-Shot Prompting y por qué “enseñar con ejemplos” alinea mejor que dar instrucciones largas. Analicemos qué hace que un ejemplo sea útil (claridad de entrada, salida esperada, y patrón repetible). Guíame a construir 2–3 ejemplos consistentes para un mismo objetivo y a verificar si la IA realmente está siguiendo el patrón o solo “imitando superficialmente”.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Aprendizaje por patrones (In-context learning): Es la capacidad de la IA para entender una tarea nueva simplemente viendo unos pocos ejemplos en la conversación, sin necesidad de reprogramarla.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar plataformas de IA para diseñar prompts estructurados con ejemplos de entrada y salida (Few-Shot).</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes variaciones de ejemplos para observar cómo cambia la consistencia de la IA.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Dispositivo con acceso a internet (1 por estudiante o pareja)</label>
+                        <label><input type="checkbox"> Acceso a ChatGPT (https://chatgpt.com/)</label><label><input type="checkbox"> Acceso a Gemini (https://gemini.google.com/)</label><label><input type="checkbox"> Acceso a Claude (https://claude.ai/)</label>
+                        <label><input type="checkbox"> Guía de referencia sobre Few-Shot Prompting</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa ingeniería de prompts (texto) en plataformas de IA</label>
+                        <label><input type="checkbox"> 📋 Para mejorar resultados: En el chat, usa etiquetas como 'Entrada:' y 'Salida:' para separar tus ejemplos.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantén tus contraseñas seguras, cierra sesión en dispositivos compartidos y no compartas información privada con la IA.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre Few-Shot Prompting y aprendizaje por patrones (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si la IA ignora el formato:</strong> Asegúrate de que los ejemplos de salida terminen de forma clara y que no haya instrucciones contradictorias al final del prompt.</li><li><strong>Si la IA mezcla los ejemplos:</strong> Intenta separar cada par de entrada/salida con etiquetas claras como 'Entrada:' y 'Salida:' o usando símbolos como ###.</li><li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "Hoy le daremos precisión quirúrgica a sus interacciones con la IA".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Few-Shot Prompting y aprendizaje por patrones.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A diseñar ejemplos de entrada y salida para que la IA responda con total consistencia y formato.</p>
+                        <p><strong>Aplicación real:</strong> Los especialistas en IA en empresas tecnológicas usan esta técnica para crear asistentes que responden siempre con el mismo tono y estructura profesional.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica qué hace que un ejemplo sea útil (claridad y patrón repetible).</li>
+                            <li>Introduce el concepto de aprendizaje por patrones (in-context learning).</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a construir 2-3 ejemplos consistentes para un objetivo.</li>
+                            <li>Aprender a verificar si la IA sigue el patrón o solo imita superficialmente.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a usar Few-Shot Prompting para controlar la consistencia de la IA.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Hola a todos! Hoy vamos a subir de nivel en nuestra forma de hablar con la IA. Vamos a aprender 'Few-Shot Prompting', que es básicamente darle ejemplos a la IA para que entienda exactamente qué queremos. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él. Abran su chat, salúdenlo y dejen que XOLO los guíe para descubrir por qué un par de ejemplos valen más que mil instrucciones. ¡Pregúntenle todo lo que necesiten!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los plataformas de IA conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a elegir una tarea concreta y a diseñar el prompt Few-Shot.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea para organizar notas o generar texto con formato fijo.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Probar el prompt en su plataforma de IA favorita y ajustar los ejemplos. y probar.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a elegir una tarea concreta (por ejemplo: organizar notas, generar ideas con estilo específico o producir texto con un formato fijo) y a diseñar mi prompt Few-Shot con 2–3 ejemplos entrada/salida. Luego acompáñame a probarlo, detectar fallas y ajustar los ejemplos para mejorar consistencia. Ejecuta: entrega mi prompt final + un resultado nuevo generado (no copiado) que cumpla el patrón."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿La IA generó el nuevo resultado respetando el formato de tus ejemplos?</li>
+                            <li>¿Qué sucede si el nuevo dato de entrada es muy diferente a los ejemplos iniciales?</li>
+                            <li>¿Funciona mejor el patrón con 2 ejemplos o con 3?</li>
+                            <li>¿Cómo evaluaste si la IA realmente siguió el patrón o si cometió errores sutiles?</li>
+                            <li>¿En qué situaciones del mundo real es vital que una IA siga un patrón estricto en lugar de ser creativa?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es momento de poner manos a la obra! Vamos a crear un prompt que sea capaz de realizar una tarea repetitiva con perfección. Pueden diseñar un sistema que convierta sus apuntes en tablas, o uno que cree guiones con un estilo muy específico. XOLO los ayudará a definir la tarea y a redactar los ejemplos de entrada y salida. Una vez que tengan su prompt, llévenlo a ChatGPT, Gemini o Claude y pónganlo a prueba con datos nuevos. Si la IA se desvía del camino, vuelvan con XOLO para ajustar los ejemplos. ¡El objetivo es lograr consistencia total!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya logré que la IA siga mi patrón con 3 ejemplos. ¿Cómo puedo estructurar mi prompt para que también sepa qué hacer cuando la entrada no tiene sentido o está incompleta?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué patrones y formatos logró que la IA siguiera con éxito.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué parte de tus ejemplos fue la más importante para que la IA entendiera el formato? ¿Qué te sorprendió de su capacidad de imitación?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi IA logró generar textos con el formato de mis ejemplos de organización. Me sorprendió que entendió el patrón incluso con solo dos ejemplos claros."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html>
+</html></html>
